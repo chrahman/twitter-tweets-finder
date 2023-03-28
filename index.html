@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Old Tweet Finder - Twitter old tweets finder, old tweet finder by date</title>
+    <meta name="description" content="Old Tweet Finder, Twitter old tweets finder, old tweet finder by date, old tweets finder website, find old tweets by date, Twitter find old tweets by date.">
+    <meta name="keywords" content="old tweet finder, twitter old, get old tweets, old tweet finder tool, twitter old tweets finder, old tweet finder by date, old tweets finder website, find old tweets by date, twitter find old tweets by date.">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+    <meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large" />
+    <link rel="canonical" href="https://www.oldtweetfinder.com/" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Old Tweet Finder - Twitter old tweets finder, old tweet finder by date" />
+    <meta property="og:description" content="Old Tweet Finder, Twitter old tweets finder, old tweet finder by date, old tweets finder website, find old tweets by date, Twitter find old tweets by date." />
+    <meta property="og:url" content="https://www.oldtweetfinder.com/" />
+    <meta property="og:site_name" content="Old Tweet Finder" />
+    <meta property="og:image" content="/assets/old-tweet-finder.png" />
+    <meta property="og:image:secure_url" content="/assets/old-tweet-finder.png" />
+    <meta property="og:image:alt" content="Old Tweet Finder" />
+    <meta property="og:image:type" content="image/png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Old Tweet Finder - Twitter old tweets finder, old tweet finder by date" />
+    <meta name="twitter:description" content="Old Tweet Finder, Twitter old tweets finder, old tweet finder by date, old tweets finder website, find old tweets by date, Twitter find old tweets by date." />
+    <meta name="twitter:image" content="/assets/old-tweet-finder.png" />
+
+    <link rel="icon" type="image/png" sizes="192x192"  href="/assets/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512"  href="/assets/android-chrome-512x512.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+    <meta name="msapplication-TileImage" content="/assets/favicon.ico">
+    <link rel="icon" href="/assets/favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary py-1">
+    <div class="container">
+        <a class="navbar-brand fw-bold  h-100" href="/">
+            <img src="/assets/android-chrome-512x512.png" class="pb-1 me-3" alt="Old Tweet Finder Logo" width="30">
+            <span>Old Tweet Finder</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarTogglerDemo03">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/contact-us.html">Contact us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/about-us.html">About us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/our-policy.html">Our Policy</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    </nav>
+
+    <div class="main-app main">
+        <div class="container my-2">
+            <h1 class="fw-bold mb-4 text-center">
+                <img src="/assets/twitter-logo.png" alt="Twitter Logo" width="50">
+                Twitter Old Tweets finder
+            </h1>
+            <form onsubmit="generateLink(event)">
+                <div class="userName input-group input-group-lg mb-3">
+                    <label class="input-group-text" for="username">@</label>
+                    <input class="form-control rounded-end" type="text" id="username" name="username" placeholder="username" autocomplete="off">
+                    <div class="d-block w-100 fs-sm mt-1 ms-1">Example: @Twitter - sent from @Twitter</div>
+                </div>
+                <h6 class="mb-2">Select Single Date</h6>
+                <div class="fromDate mb-4">
+                    <div class="flex">
+                        <div class="parent">
+                            <label for="singleMonth">Month</label>
+                            <select name="month" id="singleMonth" class="form-select form-select-lg"></select>
+                        </div>
+                        <div class="parent">
+                            <label for="singleDay">Day</label>
+                            <select name="day" id="singleDay" class="form-select form-select-lg"></select>
+                        </div>
+                        <div class="parent me-0">
+                            <label for="singleYear">Year</label>
+                            <select name="year" id="singleYear" class="form-select form-select-lg">Year:</select>
+                        </div>
+                    </div>
+                </div>
+                <h6 class="mb-2">OR Select Dates between Duration</h6>
+                <div class="row justify-content-end mb-4">
+                    <div class="fromDate mb-2">
+                        <div class="ms-1">From</div>
+                        <div class="flex">
+                            <div class="parent">
+                                <label for="fromMonth">Month</label>
+                                <select name="month" id="fromMonth" class="form-select form-select-lg"></select>
+                            </div>
+                            <div class="parent">
+                                <label for="fromDay">Day</label>
+                                <select name="day" id="fromDay" class="form-select form-select-lg"></select>
+                            </div>
+                            <div class="parent me-0">
+                                <label for="fromYear">Year</label>
+                                <select name="year" id="fromYear" class="form-select form-select-lg" >Year:</select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="toDate">
+                        <div class="ms-1">To</div>
+                        <div class="flex">
+                            <div class="parent">
+                                <label for="toMonth">Month</label>
+                                <select name="month" id="toMonth" class="form-select form-select-lg"></select>
+                            </div>
+                            <div class="parent">
+                                <label for="toDay">Day</label>
+                                <select name="day" id="toDay" class="form-select form-select-lg"></select>
+                            </div>
+                            <div class="parent me-0">
+                                <label for="toYear">Year</label>
+                                <select name="year" id="toYear" class="form-select form-select-lg">Year:</select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn btn-primary w-100 mt-2" type="submit">Show Tweets</button>
+            </form>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <footer class="py-3 mt-4">
+            <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                <li class="nav-item"><a href="/" class="nav-link px-2 text-body-secondary">Home</a></li>
+                <li class="nav-item"><a href="/about-us.html" class="nav-link px-2 text-body-secondary">About</a></li>
+                <li class="nav-item"><a href="/contact-us.html" class="nav-link px-2 text-body-secondary">Contact</a></li>
+                <li class="nav-item"><a href="/our-policy.html" class="nav-link px-2 text-body-secondary">Policy</a></li>
+            </ul>
+            <p class="text-center text-body-secondary">© 2023 Copyright, Old Tweet Finder</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.min.js" integrity="sha384-heAjqF+bCxXpCWLa6Zhcp4fu20XoNIA98ecBC1YkdXhszjoejr5y9Q77hIrv8R9i" crossorigin="anonymous"></script>
+
+</body>
+</html>
