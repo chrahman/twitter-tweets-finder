@@ -178,15 +178,15 @@
             >
           </li>
         </ul>
-        <p class="text-center text-body-secondary">© 2023 Copyright, Old Tweet Finder</p>
+        <p class="text-center text-body-secondary">© 2023 Copyright, Powered by <a href="https://www.cinextech.com" target="_blank">CinexTech</a></p>
       </footer>
     </div>
 
     <script>
         const navLinks = document.querySelectorAll('.navbar-nav .nav-item .nav-link');
         navLinks.forEach(navLink => {
-            if (navLink.getAttribute('href') === window.location.pathname) {
-                navLink.classList.add('active');
+            if (navLink.getAttribute('href').replace(".html", "") === window.location.pathname.replace(".html", "")) {
+              navLink.classList.add('active');
             }
         });
     </script>

@@ -114,13 +114,13 @@
             <li class="nav-item"><a href="/contact-us.html" class="nav-link px-2 text-body-secondary">Contact</a></li>
             <li class="nav-item"><a href="/our-policy.html" class="nav-link px-2 text-body-secondary">Policy</a></li>
         </ul>
-        <p class="text-center text-body-secondary">© 2023 Copyright, Old Tweet Finder</p>
+        <p class="text-center text-body-secondary">© 2023 Copyright, Powered by <a href="https://www.cinextech.com" target="_blank">CinexTech</a></p>
       </footer>
     </div>
     <script>
         const navLinks = document.querySelectorAll('.navbar-nav .nav-item .nav-link');
         navLinks.forEach(navLink => {
-            if (navLink.getAttribute('href') === window.location.pathname) {
+            if (navLink.getAttribute('href').replace(".html", "") === window.location.pathname.replace(".html", "")) {
                 navLink.classList.add('active');
             }
         });

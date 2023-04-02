@@ -190,13 +190,14 @@ function generateLink(e) {
     window.open(`https://twitter.com/search?lang=en&q=(from%3A${username.value})%20until%3A${toDate}%20since%3A${fromDate}&src=typed_query`);
   }
   else {
+    isError("Please select date range", singleMonthSelect);
     return;
   }
 }
 
 const navLinks = document.querySelectorAll(".navbar-nav .nav-item .nav-link");
 navLinks.forEach((navLink) => {
-  if (navLink.getAttribute("href") === window.location.pathname) {
+   if (navLink.getAttribute('href').replace(".html", "") === window.location.pathname.replace(".html", "")) {
     navLink.classList.add("active");
   }
 });
